@@ -1,4 +1,4 @@
-package com.nptec.mvp;
+package com.nptec.mvp.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.nptec.mvp.R;
 
 public class MainActivity extends AppCompatActivity {
 
