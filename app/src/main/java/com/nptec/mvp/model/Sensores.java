@@ -11,10 +11,20 @@ public class Sensores implements Serializable {
     private int t1;
     private int t2;
 
+    public int getN() {
+        return n;
+    }
+
+    public void setN(int n) {
+        this.n = n;
+    }
+
+    private int n;
+
     public Sensores() {
     }
 
-    public Sensores(int temperatura, int ph, int rpm, int c1, int c2, int t1, int t2) {
+    public Sensores(int temperatura, int ph, int rpm, int c1, int c2, int t1, int t2, int n) {
         this.temperatura = temperatura;
         this.ph = ph;
         this.rpm = rpm;
@@ -22,6 +32,7 @@ public class Sensores implements Serializable {
         this.c2 = c2;
         this.t1 = t1;
         this.t2 = t2;
+        this.n = n;
     }
 
     public int getTemperatura() {
@@ -80,4 +91,17 @@ public class Sensores implements Serializable {
         this.t2 = t2;
     }
 
+    @Override
+    public String toString() {
+        return "Sensores{" +
+                "temperatura=" + temperatura +
+                ", ph=" + ph +
+                ", rpm=" + rpm +
+                ", c1=" + c1 +
+                ", c2=" + c2 +
+                ", t1=" + t1 +
+                ", t2=" + t2 +
+                ", n=" + n +
+                '}';
+    }
 }

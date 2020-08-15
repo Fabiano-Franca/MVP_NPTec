@@ -10,8 +10,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.nptec.mvp.R;
+import com.nptec.mvp.dao.DownloadDados;
+import com.nptec.mvp.dao.HttpService;
 
 import java.sql.Array;
+import java.util.concurrent.ExecutionException;
 
 public class ListaDeSensoresActivity extends AppCompatActivity {
 
@@ -39,6 +42,8 @@ public class ListaDeSensoresActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Log.i("Sensor clicado:", (String) adapterView.getItemAtPosition(i));
                 //Abrir tela de status de cada sensor
+                //TESTE JSON
+                new HttpService().execute();
             }
         });
     }
