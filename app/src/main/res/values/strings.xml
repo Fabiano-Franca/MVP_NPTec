@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MVP_NPTec</string>
+    <string name="logo_da_tela_de_login">Logo da Tela de Login</string>
+    <string name="campo_usu_rio">Campo usuário</string>
+    <string name="campo_senha">Campo senha</string>
+    <string name="senha">Senha</string>
+    <string name="bot_o_entrar">Botão entrar</string>
+    <string name="entrar">ENTRAR</string>
+    <string name="campo_para_recupera_o_da_senha">Campo para recuperação da senha</string>
+    <string name="recuperar_senha">Recuperar senha</string>
+    <string name="usu_rio">Usuário</string>
+</resources>
