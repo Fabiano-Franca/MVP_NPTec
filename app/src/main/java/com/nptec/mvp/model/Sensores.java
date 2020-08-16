@@ -1,31 +1,32 @@
 package com.nptec.mvp.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 public class Sensores implements Serializable {
-    private int temperatura;
-    private int ph;
-    private int rpm;
-    private int c1;
-    private int c2;
-    private int t1;
-    private int t2;
-
-    public int getN() {
-        return n;
-    }
-
-    public void setN(int n) {
-        this.n = n;
-    }
-
-    private int n;
+    @SerializedName("TEMP")
+    private String temp;
+    @SerializedName("PH")
+    private String ph;
+    @SerializedName("RPM")
+    private String rpm;
+    @SerializedName("C1")
+    private String c1;
+    @SerializedName("C2")
+    private String c2;
+    @SerializedName("T1")
+    private String t1;
+    @SerializedName("T2")
+    private String t2;
+    @SerializedName("N")
+    private  String n;
 
     public Sensores() {
     }
 
-    public Sensores(int temperatura, int ph, int rpm, int c1, int c2, int t1, int t2, int n) {
-        this.temperatura = temperatura;
+    public Sensores(String temp, String ph, String rpm, String c1, String c2, String t1, String t2, String n) {
+        this.temp = temp;
         this.ph = ph;
         this.rpm = rpm;
         this.c1 = c1;
@@ -35,66 +36,74 @@ public class Sensores implements Serializable {
         this.n = n;
     }
 
-    public int getTemperatura() {
-        return temperatura;
+    public String getTemp() {
+        return temp;
     }
 
-    public int getPh() {
+    public void setTemp(String temp) {
+        this.temp = temp;
+    }
+
+    public String getPh() {
         return ph;
     }
 
-    public int getRpm() {
-        return rpm;
-    }
-
-    public int getC1() {
-        return c1;
-    }
-
-    public int getC2() {
-        return c2;
-    }
-
-    public int getT1() {
-        return t1;
-    }
-
-    public int getT2() {
-        return t2;
-    }
-
-    public void setTemperatura(int temperatura) {
-        this.temperatura = temperatura;
-    }
-
-    public void setPh(int ph) {
+    public void setPh(String ph) {
         this.ph = ph;
     }
 
-    public void setRpm(int rpm) {
+    public String getRpm() {
+        return rpm;
+    }
+
+    public void setRpm(String rpm) {
         this.rpm = rpm;
     }
 
-    public void setC1(int c1) {
+    public String getC1() {
+        return c1;
+    }
+
+    public void setC1(String c1) {
         this.c1 = c1;
     }
 
-    public void setC2(int c2) {
+    public String getC2() {
+        return c2;
+    }
+
+    public void setC2(String c2) {
         this.c2 = c2;
     }
 
-    public void setT1(int t1) {
+    public String getT1() {
+        return t1;
+    }
+
+    public void setT1(String t1) {
         this.t1 = t1;
     }
 
-    public void setT2(int t2) {
+    public String getT2() {
+        return t2;
+    }
+
+    public void setT2(String t2) {
         this.t2 = t2;
+    }
+
+    public String getN() {
+        return n;
+    }
+
+    public void setN(String n) {
+        this.n = n;
     }
 
     @Override
     public String toString() {
         return "Sensores{" +
-                "temperatura=" + temperatura +
+                "temp=" + temp +
                 ", ph=" + ph +
                 ", rpm=" + rpm +
                 ", c1=" + c1 +

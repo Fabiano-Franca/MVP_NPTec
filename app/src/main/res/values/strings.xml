@@ -9,4 +9,6 @@
     <string name="campo_para_recupera_o_da_senha">Campo para recuperação da senha</string>
     <string name="recuperar_senha">Recuperar senha</string>
     <string name="usu_rio">Usuário</string>
+    <string name="temperatura">TEMPERATURA</string>
+    <string name="_10">10</string>
 </resources>

@@ -3,4 +3,7 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="seekBar_bom">#32CD32</color>
+    <color name="seekBar_relugar">#FFFF00</color>
+    <color name="seekBar_ruim">#FF0000</color>
 </resources>
