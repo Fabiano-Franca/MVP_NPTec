@@ -36,7 +36,7 @@ public class MediaActivity extends AppCompatActivity {
 
         inicializaCampos();
         pegaSensores();
-        alteraView();
+
 
 
     }
@@ -73,10 +73,12 @@ public class MediaActivity extends AppCompatActivity {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void pegaSensores() {
         Intent dados = getIntent();
         if (dados.hasExtra("SENSORES_PUTEXTRA")) {
             sensores = (Sensores) dados.getSerializableExtra("SENSORES_PUTEXTRA");
+            alteraView();
         }
     }
 
