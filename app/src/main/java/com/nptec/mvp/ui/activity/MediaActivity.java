@@ -36,9 +36,6 @@ public class MediaActivity extends AppCompatActivity {
 
         inicializaCampos();
         pegaSensores();
-
-
-
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)

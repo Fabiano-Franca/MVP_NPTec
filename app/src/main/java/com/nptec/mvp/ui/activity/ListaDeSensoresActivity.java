@@ -59,7 +59,7 @@ public class ListaDeSensoresActivity extends AppCompatActivity {
                 if (sensorClidado.equals("Status do Tanque")){
                     Log.i("Sensor clicado:", sensorClidado);
                     try {
-                        sensores = new HttpService().execute("view-last-data").get();
+                        sensores = new ListaDeSensoresActivity.HttpService().execute("view-last-data").get();
                     } catch (ExecutionException e) {
                         e.printStackTrace();
                     } catch (InterruptedException e) {
@@ -73,7 +73,7 @@ public class ListaDeSensoresActivity extends AppCompatActivity {
                 }else if (sensorClidado.equals("Média")){
                     Log.i("Sensor clicado:", sensorClidado);
                     try {
-                        sensores = new HttpService().execute("view-all-average").get();
+                        sensores = new ListaDeSensoresActivity.HttpService().execute("view-all-average").get();
                     } catch (ExecutionException e) {
                         e.printStackTrace();
                     } catch (InterruptedException e) {
@@ -89,7 +89,7 @@ public class ListaDeSensoresActivity extends AppCompatActivity {
 
 
                     try {
-                        sensores = new HttpService().execute("view-all-standard-deviation").get();
+                        sensores = new ListaDeSensoresActivity.HttpService().execute("view-all-standard-deviation").get();
                     } catch (ExecutionException e) {
                         e.printStackTrace();
                     } catch (InterruptedException e) {
@@ -114,7 +114,7 @@ public class ListaDeSensoresActivity extends AppCompatActivity {
         listaDeSensores.setAdapter(adapter);
     }
 
-    class HttpService extends AsyncTask<String, Void, Sensores> {
+    private class HttpService extends AsyncTask<String, Void, Sensores> {
 
     /*
     * url_base = victortirano.pythonanywhere.com
