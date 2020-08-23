@@ -13,7 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.activity.StatusGeralActivity"></activity>
+        <activity
+            android:name=".ui.activity.NavigationDrawerActivity"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".ui.activity.StatusGeralActivity" />
         <activity android:name=".ui.activity.MediaActivity" />
         <activity android:name=".ui.activity.ListaDeSensoresActivity" />
         <activity
