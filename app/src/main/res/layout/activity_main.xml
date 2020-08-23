@@ -55,6 +55,7 @@
         android:id="@+id/entrar_login_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/borda_arredondada"
         android:contentDescription="@string/bot_o_entrar"
         android:text="@string/entrar"
         app:layout_constraintBottom_toBottomOf="parent"

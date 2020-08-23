@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.nptec.mvp.R;
-import com.nptec.mvp.StatusGeralActivity;
 
 public class MainActivity extends AppCompatActivity {
 

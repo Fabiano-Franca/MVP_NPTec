@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".StatusGeralActivity"></activity>
+        <activity android:name=".ui.activity.StatusGeralActivity"></activity>
         <activity android:name=".ui.activity.MediaActivity" />
         <activity android:name=".ui.activity.ListaDeSensoresActivity" />
         <activity

@@ -1,10 +1,9 @@
-package com.nptec.mvp;
+package com.nptec.mvp.ui.activity;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.AsyncTask;
@@ -12,16 +11,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.nptec.mvp.R;
 import com.nptec.mvp.dao.Utils;
 import com.nptec.mvp.model.Sensores;
-import com.nptec.mvp.ui.activity.ListaDeSensoresActivity;
-import com.nptec.mvp.ui.activity.MediaActivity;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -39,8 +36,14 @@ public class StatusGeralActivity extends AppCompatActivity {
     TextView valorPh;
     TextView statusPh;
     Sensores sensores;
+    TextView corrente01;
+    TextView corrente02;
+    TextView tensao01;
+    TextView tensao02;
+
     ProgressDialog load;
     private ArrayAdapter<String> adapter;
+
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -94,8 +97,15 @@ public class StatusGeralActivity extends AppCompatActivity {
             statusPh.setText("PERIGO");
             phSeekBar.setProgressTintList(ColorStateList.valueOf(Color.RED));
         }
+
+        corrente01.setText(sensores.getC1());
+        corrente02.setText(sensores.getC2());
+        tensao01.setText(sensores.getT1());
+        tensao02.setText(sensores.getT2());
+
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void inicializaCampos() {
         temperaturaSeekBar = findViewById(R.id.temperatura_mediaG_seekBar);
         valorTemperatura = findViewById(R.id.valorTemperatura_mediaG_textView);
@@ -103,9 +113,14 @@ public class StatusGeralActivity extends AppCompatActivity {
         phSeekBar = findViewById(R.id.ph_mediaG_seekBar);
         valorPh = findViewById(R.id.valorPh_mediaG_textView);
         statusPh = findViewById(R.id.statusPh_mediaG_textView);
+        corrente01 = findViewById(R.id.valor_corrente01_textView);
+        corrente02 = findViewById(R.id.valor_corrente02_textView);
+        tensao01 = findViewById(R.id.valor_tensao01_textView);
+        tensao02 = findViewById(R.id.valor_tensao02_textView);
         configuraLista();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void configuraLista() {
         ListView listaDeSensores = findViewById(R.id.listaSensores_mediaG_listView);
         configuraAdapter(listaDeSensores);
@@ -174,11 +189,12 @@ public class StatusGeralActivity extends AppCompatActivity {
     }
 
     private void configuraAdapter(ListView listaDeSensores) {
+        String[] listaDeSensoresString = {"Status do Tanque", "Média","Desvio Padrão"};
         adapter = new ArrayAdapter<>(
                 this,
-                android.R.layout.simple_list_item_1);
-        String[] listaDeSensoresString = {"Status do Tanque", "Média","Desvio Padrão"};
-        adapter.addAll( listaDeSensoresString );
+                android.R.layout.simple_list_item_1, listaDeSensoresString);
+
+        //adapter.addAll( listaDeSensoresString );
         listaDeSensores.setAdapter(adapter);
     }
 
